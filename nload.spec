@@ -5,8 +5,6 @@ Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-acconfig.h.patch
 Patch1:		%{name}-am_fixes.patch
