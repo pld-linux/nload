@@ -1,12 +1,12 @@
 Summary:	A console application which monitors network traffic and bandwidth usage in real time
 Summary(pl):	Konsolowa aplikacja monitoruj±ca ruch w sieci w czasie rzeczywistym
 Name:		nload
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	4b6bdc397f25af456ccecbf748b1af26
+# Source0-md5:	a8859e49176bb50826b52b8345b117d3
 Patch0:		%{name}-form_field_h.patch
 URL:		http://www.roland-riegel.de/nload/index_en.html
 BuildRequires:	autoconf
