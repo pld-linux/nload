@@ -8,7 +8,8 @@ Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-Url:		http://www.roland-riegel.de/nload/index_en.html
+URL:		http://www.roland-riegel.de/nload/index_en.html
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,16 +28,14 @@ przes³anych danych oraz minimalne/maksymalne wykorzystanie pasma.
 %setup -q
 
 %build
-CFLAGS="%{rpmcflags}"\
-	CXXFLAGS="%{rpmcflags} -I%{_includedir}/ncurses"\
-	./configure\
-		--prefix=%{_prefix}\
-		--mandir=%{_mandir}
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
+%configure
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf README ChangeLog AUTHORS
@@ -46,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz ChangeLog.gz AUTHORS.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
