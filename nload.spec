@@ -34,8 +34,8 @@ przes³anych danych oraz minimalne/maksymalne wykorzystanie pasma.
 
 %build
 rm -f missing
-aclocal
-autoheader
+%{__aclocal}
+%{__autoheader}
 %{__autoconf}
 %{__automake}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
