@@ -5,7 +5,7 @@ Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-acconfig.h.patch
 Patch1:		%{name}-am_fixes.patch
 URL:		http://www.roland-riegel.de/nload/index_en.html
