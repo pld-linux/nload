@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	a2d3607263f9d63883b90c03a3b7b2b1
 Patch0:		%{name}-acconfig.h.patch
 Patch1:		%{name}-am_fixes.patch
 URL:		http://www.roland-riegel.de/nload/index_en.html
