@@ -12,7 +12,7 @@ URL:		http://www.roland-riegel.de/nload/index_en.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
-BuildRequires:	ncurses-devel
+BuildRequires:	ncurses-ext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
