@@ -1,0 +1,11 @@
+--- nload-0.5.0/src/form_field.h~	2002-07-30 22:13:14.000000000 +0000
++++ nload-0.5.0/src/form_field.h	2003-09-29 21:02:52.000000000 +0000
+@@ -86,7 +86,7 @@
+ 		virtual void slot_fieldChanged( Field* field ) {}
+ 	};
+ 	
+-	Form( Slots* slots = 0 );
++	Form( Slots* slots );
+ 	~Form();
+ 	
+ 	vector<Field *>& fields();
