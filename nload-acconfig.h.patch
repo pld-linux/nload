@@ -1,0 +1,8 @@
+--- nload-0.4.0/acconfig.h~	Mon Jan  7 10:53:54 2002
++++ nload-0.4.0/acconfig.h	Mon Jan  7 10:53:54 2002
+@@ -1,4 +1,4 @@
+-# Helder Correia <helder.correia@netcabo.pt>
++/* Helder Correia <helder.correia@netcabo.pt> */
+ 
+ /* Is Linux the build target OS? */
+ #undef HAVE_LINUX
