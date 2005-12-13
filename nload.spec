@@ -5,7 +5,7 @@ Version:	0.6.0
 Release:	1
 License:	GPL
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/nload/%{name}-%{version}.tar.gz
 # Source0-md5:	a8859e49176bb50826b52b8345b117d3
 Patch0:		%{name}-form_field_h.patch
 URL:		http://www.roland-riegel.de/nload/index_en.html
@@ -37,7 +37,7 @@ rm -f missing
 %{__autoheader}
 %{__autoconf}
 %{__automake}
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I/usr/include/ncurses"
 %configure
 
 %{__make}
@@ -45,7 +45,8 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I%{_includedir}/ncurses"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
