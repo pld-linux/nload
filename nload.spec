@@ -1,5 +1,5 @@
 Summary:	A console application which monitors network traffic and bandwidth usage in real time
-Summary(pl.UTF-8):   Konsolowa aplikacja monitorująca ruch w sieci w czasie rzeczywistym
+Summary(pl.UTF-8):	Konsolowa aplikacja monitorująca ruch w sieci w czasie rzeczywistym
 Name:		nload
 Version:	0.6.0
 Release:	1
