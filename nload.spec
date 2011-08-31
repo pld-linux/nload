@@ -2,7 +2,7 @@ Summary:	A console application which monitors network traffic and bandwidth usag
 Summary(pl.UTF-8):	Konsolowa aplikacja monitorująca ruch w sieci w czasie rzeczywistym
 Name:		nload
 Version:	0.7.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/nload/%{name}-%{version}.tar.gz
