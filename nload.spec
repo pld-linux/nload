@@ -5,7 +5,7 @@ Version:	0.7.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/nload/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/nload/%{name}-%{version}.tar.gz
 # Source0-md5:	3c733c528f244ca5a4f76bf185729c39
 Patch0:		%{name}-form_field_h.patch
 Patch1:		%{name}-ncurses.patch
