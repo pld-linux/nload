@@ -46,33 +46,6 @@ diff -burNp nload-0.7.2/src/window.h nload-0.7.2-new/src/window.h
  #undef clear
  #undef erase
  #undef refresh
-diff -burNp nload-0.7.2/configure nload-0.7.2-new/configure
---- nload-0.7.2/configure	2008-06-28 11:53:46.000000000 +0200
-+++ nload-0.7.2-new/configure	2008-10-11 15:33:41.803730203 +0200
-@@ -5698,7 +5698,7 @@ fi
- 
- 
- 
--for ac_header in limits.h stdlib.h string.h unistd.h curses.h form.h math.h sys/param.h sys/socket.h sys/time.h sys/ioctl.h arpa/inet.h netinet/in.h
-+for ac_header in limits.h stdlib.h string.h unistd.h ncurses/curses.h ncurses/form.h math.h sys/param.h sys/socket.h sys/time.h sys/ioctl.h arpa/inet.h netinet/in.h
- do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
- if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
-@@ -5843,12 +5843,12 @@ fi
- done
- 
- 
--if test "$ac_cv_lib_ncurses_initscr $ac_cv_header_curses_h" != "yes yes"; then
-+if test "$ac_cv_lib_ncurses_initscr $ac_cv_header_ncurses_curses_h" != "yes yes"; then
-     { { echo "$as_me:$LINENO: error: ncurses library or development files not found. ncurses is required for $PACKAGE_NAME." >&5
- echo "$as_me: error: ncurses library or development files not found. ncurses is required for $PACKAGE_NAME." >&2;}
-    { (exit 1); exit 1; }; }
- fi
--if test "$ac_cv_lib_form_new_form $ac_cv_header_form_h" != "yes yes"; then
-+if test "$ac_cv_lib_form_new_form $ac_cv_header_ncurses_form_h" != "yes yes"; then
-     { { echo "$as_me:$LINENO: error: form library or development files not found. These are part of ncurses which is required for $PACKAGE_NAME." >&5
- echo "$as_me: error: form library or development files not found. These are part of ncurses which is required for $PACKAGE_NAME." >&2;}
-    { (exit 1); exit 1; }; }
 diff -burNp nload-0.7.2/configure.in nload-0.7.2-new/configure.in
 --- nload-0.7.2/configure.in	2008-06-28 11:50:24.000000000 +0200
 +++ nload-0.7.2-new/configure.in	2008-10-11 15:34:38.093125930 +0200
