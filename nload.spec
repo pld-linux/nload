@@ -34,10 +34,9 @@ przesłanych danych oraz minimalne/maksymalne wykorzystanie pasma.
 %patch1 -p1
 
 %build
-rm -f missing
 %{__aclocal}
-%{__autoheader}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I/usr/include/ncurses"
 %configure
@@ -55,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog AUTHORS
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%doc AUTHORS ChangeLog README
+%attr(755,root,root) %{_bindir}/nload
+%{_mandir}/man1/nload.1*
