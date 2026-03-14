@@ -2,13 +2,14 @@ Summary:	A console application which monitors network traffic and bandwidth usag
 Summary(pl.UTF-8):	Konsolowa aplikacja monitorująca ruch w sieci w czasie rzeczywistym
 Name:		nload
 Version:	0.7.4
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://downloads.sourceforge.net/nload/%{name}-%{version}.tar.gz
 # Source0-md5:	3c733c528f244ca5a4f76bf185729c39
 Patch0:		%{name}-form_field_h.patch
 Patch1:		%{name}-ncurses.patch
+Patch2:		%{name}-no-ldflags-strip.patch
 URL:		http://www.roland-riegel.de/nload/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,13 +33,14 @@ przesłanych danych oraz minimalne/maksymalne wykorzystanie pasma.
 %setup -q
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -I/usr/include/ncurses"
+CXXFLAGS="%{rpmcflags} %{rpmcxxflags} -fno-rtti -fno-exceptions -I/usr/include/ncurses" \
 %configure
 
 %{__make}

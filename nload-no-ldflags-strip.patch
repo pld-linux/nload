@@ -1,0 +1,17 @@
+Keep debug info for RPM debuginfo/debugsource generation.
+Upstream configure unconditionally appends -s to LDFLAGS, which strips
+symbols from the final binary and produces an empty debugsource package.
+
+--- nload-0.7.4/configure.in.orig
++++ nload-0.7.4/configure.in
+@@ -101,8 +101,8 @@
+ dnl Adds extra arguments to configure script.
+ AC_ARG_ENABLE(debug,
+               AC_HELP_STRING([--enable-debug], [do not strip debugging symbols (default no)]),
+-	          test "$enableval" = "no" && LDFLAGS="$LDFLAGS -s",
+-	          LDFLAGS="$LDFLAGS -s")
++	          :,
++	          :)
+ 
+ dnl Checks for library functions.
+ AC_TYPE_SIGNAL
